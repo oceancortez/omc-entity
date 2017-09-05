@@ -60,7 +60,7 @@ public class NegocioEntity implements Serializable {
 	@Column(name="CD_GRP_PRDUT")
 	private Integer cdGrpPrdut;	
 	
-	@Column(name="DS_GrpPrdut")
+	@Column(name="DS_GRP_PRDUT")
 	private String dsGrpPrdut;
 	
 	@Column(name="CD_PLACA")
