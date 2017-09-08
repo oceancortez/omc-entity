@@ -19,22 +19,22 @@ public class NegocioEntity implements Serializable {
 	@Id
 	@Column(name="CD_NGOCO", nullable=false)
 	@GeneratedValue
-	private Integer cdNgoco;
+	private Long cdNgoco;
 	
 	@Column(name="NM_CIA")
 	private String nmCia;
 	
 	@Column(name="CD_RAMO")
-	private Integer cdRamo;
+	private Long cdRamo;
 	
 	@Column(name="CD_APOLICE")
-	private Integer cdApolice;
+	private Long cdApolice;
 	
 	@Column(name="CD_APOLICE_SUSEP")
-	private Integer cdApoliceSusep;
+	private Long cdApoliceSusep;
 	
 	@Column(name="CD_MDUPR")
-	private Integer cdMdupr;
+	private Long cdMdupr;
 	
 	@Column(name="DS_MDUPR")
 	private String dsMdupr;
@@ -52,13 +52,13 @@ public class NegocioEntity implements Serializable {
 	private String cdSitucNgoco;
 	
 	@Column(name="CD_ESTPL")
-	private Integer cdEstpl;
+	private Long cdEstpl;
 	
 	@Column(name="DT_VIGEN_PROPOR")	
 	private Date dtVigenPropor;
 	
 	@Column(name="CD_GRP_PRDUT")
-	private Integer cdGrpPrdut;	
+	private Long cdGrpPrdut;	
 	
 	@Column(name="DS_GRP_PRDUT")
 	private String dsGrpPrdut;
@@ -70,16 +70,16 @@ public class NegocioEntity implements Serializable {
 	private String cdChassi;
 	
 	@Column(name="NR_ITSEG")
-	private Integer nrItseg;
+	private Long nrItseg;
 	
 	@Column(name="CD_CORRETOR")
-	private Integer cdCorretor;
+	private Long cdCorretor;
 	
 	@Column(name="NM_CORRETOR")
 	private String nmCorretor;
 	
 	@Column(name="CD_SUCURSAL")
-	private Integer cdSucursal;
+	private Long cdSucursal;
 	
 	@Column(name="NM_SUCURSAL")
 	private String nmSucursal;
@@ -88,16 +88,16 @@ public class NegocioEntity implements Serializable {
 	private String stNegocio;
 	
 	@Column(name="CD_ENDOSSO")
-	private Integer cdEndosso;
+	private Long cdEndosso;
 	
 	@Column(name="CD_CLIEN")
-	private Integer cdClien;
+	private Long cdClien;
 
-	public Integer getCdNgoco() {
+	public Long getCdNgoco() {
 		return cdNgoco;
 	}
 
-	public void setCdNgoco(Integer cdNgoco) {
+	public void setCdNgoco(Long cdNgoco) {
 		this.cdNgoco = cdNgoco;
 	}
 
@@ -109,35 +109,35 @@ public class NegocioEntity implements Serializable {
 		this.nmCia = nmCia;
 	}
 
-	public Integer getCdRamo() {
+	public Long getCdRamo() {
 		return cdRamo;
 	}
 
-	public void setCdRamo(Integer cdRamo) {
+	public void setCdRamo(Long cdRamo) {
 		this.cdRamo = cdRamo;
 	}
 
-	public Integer getCdApolice() {
+	public Long getCdApolice() {
 		return cdApolice;
 	}
 
-	public void setCdApolice(Integer cdApolice) {
+	public void setCdApolice(Long cdApolice) {
 		this.cdApolice = cdApolice;
 	}
 
-	public Integer getCdApoliceSusep() {
+	public Long getCdApoliceSusep() {
 		return cdApoliceSusep;
 	}
 
-	public void setCdApoliceSusep(Integer cdApoliceSusep) {
+	public void setCdApoliceSusep(Long cdApoliceSusep) {
 		this.cdApoliceSusep = cdApoliceSusep;
 	}
 
-	public Integer getCdMdupr() {
+	public Long getCdMdupr() {
 		return cdMdupr;
 	}
 
-	public void setCdMdupr(Integer cdMdupr) {
+	public void setCdMdupr(Long cdMdupr) {
 		this.cdMdupr = cdMdupr;
 	}
 
@@ -181,11 +181,11 @@ public class NegocioEntity implements Serializable {
 		this.cdSitucNgoco = cdSitucNgoco;
 	}
 
-	public Integer getCdEstpl() {
+	public Long getCdEstpl() {
 		return cdEstpl;
 	}
 
-	public void setCdEstpl(Integer cdEstpl) {
+	public void setCdEstpl(Long cdEstpl) {
 		this.cdEstpl = cdEstpl;
 	}
 
@@ -197,11 +197,11 @@ public class NegocioEntity implements Serializable {
 		this.dtVigenPropor = dtVigenPropor;
 	}
 
-	public Integer getCdGrpPrdut() {
+	public Long getCdGrpPrdut() {
 		return cdGrpPrdut;
 	}
 
-	public void setCdGrpPrdut(Integer cdGrpPrdut) {
+	public void setCdGrpPrdut(Long cdGrpPrdut) {
 		this.cdGrpPrdut = cdGrpPrdut;
 	}
 
@@ -229,19 +229,19 @@ public class NegocioEntity implements Serializable {
 		this.cdChassi = cdChassi;
 	}
 
-	public Integer getNrItseg() {
+	public Long getNrItseg() {
 		return nrItseg;
 	}
 
-	public void setNrItseg(Integer nrItseg) {
+	public void setNrItseg(Long nrItseg) {
 		this.nrItseg = nrItseg;
 	}
 
-	public Integer getCdCorretor() {
+	public Long getCdCorretor() {
 		return cdCorretor;
 	}
 
-	public void setCdCorretor(Integer cdCorretor) {
+	public void setCdCorretor(Long cdCorretor) {
 		this.cdCorretor = cdCorretor;
 	}
 
@@ -253,11 +253,11 @@ public class NegocioEntity implements Serializable {
 		this.nmCorretor = nmCorretor;
 	}
 
-	public Integer getCdSucursal() {
+	public Long getCdSucursal() {
 		return cdSucursal;
 	}
 
-	public void setCdSucursal(Integer cdSucursal) {
+	public void setCdSucursal(Long cdSucursal) {
 		this.cdSucursal = cdSucursal;
 	}
 
@@ -277,19 +277,19 @@ public class NegocioEntity implements Serializable {
 		this.stNegocio = stNegocio;
 	}
 
-	public Integer getCdEndosso() {
+	public Long getCdEndosso() {
 		return cdEndosso;
 	}
 
-	public void setCdEndosso(Integer cdEndosso) {
+	public void setCdEndosso(Long cdEndosso) {
 		this.cdEndosso = cdEndosso;
 	}
 
-	public Integer getCdClien() {
+	public Long getCdClien() {
 		return cdClien;
 	}
 
-	public void setCdClien(Integer cdClien) {
+	public void setCdClien(Long cdClien) {
 		this.cdClien = cdClien;
 	}
 	

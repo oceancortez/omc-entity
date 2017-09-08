@@ -21,25 +21,25 @@ public class ItemEntity implements Serializable{
 	@Id
 	@Column(name = "CD_ITEM")
 	@GeneratedValue
-	private Integer cdItem;
+	private Long cdItem;
 
 	@Column(name = "CD_APOLI")
-	private Integer cdApoli;
+	private Long cdApoli;
 
 	@Column(name = "CD_APOLI_SUSEP_RENOV")
-	private Integer cdApoliSusepRenov;
+	private Long cdApoliSusepRenov;
 
 	@Column(name = "CD_CLIEN")
-	private Integer cdClien;
+	private Long cdClien;
 
 	@Column(name = "CD_ENDOS")
-	private Integer cdEndos;
+	private Long cdEndos;
 
 	@Column(name = "CD_NGOCO")
-	private Integer cdNgoco;
+	private Long cdNgoco;
 
 	@Column(name = "CD_MDUPR")
-	private Integer cdMdupr;
+	private Long cdMdupr;
 	
 	@Column(name = "DT_ULTMA_ALTER")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -54,59 +54,59 @@ public class ItemEntity implements Serializable{
 	
 	
 
-	public Integer getCdItem() {
+	public Long getCdItem() {
 		return cdItem;
 	}
 
-	public void setCdItem(Integer cdItem) {
+	public void setCdItem(Long cdItem) {
 		this.cdItem = cdItem;
 	}
 
-	public Integer getCdApoli() {
+	public Long getCdApoli() {
 		return cdApoli;
 	}
 
-	public void setCdApoli(Integer cdApoli) {
+	public void setCdApoli(Long cdApoli) {
 		this.cdApoli = cdApoli;
 	}
 
-	public Integer getCdApoliSusepRenov() {
+	public Long getCdApoliSusepRenov() {
 		return cdApoliSusepRenov;
 	}
 
-	public void setCdApoliSusepRenov(Integer cdApoliSusepRenov) {
+	public void setCdApoliSusepRenov(Long cdApoliSusepRenov) {
 		this.cdApoliSusepRenov = cdApoliSusepRenov;
 	}
 
-	public Integer getCdClien() {
+	public Long getCdClien() {
 		return cdClien;
 	}
 
-	public void setCdClien(Integer cdClien) {
+	public void setCdClien(Long cdClien) {
 		this.cdClien = cdClien;
 	}
 
-	public Integer getCdEndos() {
+	public Long getCdEndos() {
 		return cdEndos;
 	}
 
-	public void setCdEndos(Integer cdEndos) {
+	public void setCdEndos(Long cdEndos) {
 		this.cdEndos = cdEndos;
 	}
 
-	public Integer getCdNgoco() {
+	public Long getCdNgoco() {
 		return cdNgoco;
 	}
 
-	public void setCdNgoco(Integer cdNgoco) {
+	public void setCdNgoco(Long cdNgoco) {
 		this.cdNgoco = cdNgoco;
 	}
 
-	public Integer getCdMdupr() {
+	public Long getCdMdupr() {
 		return cdMdupr;
 	}
 
-	public void setCdMdupr(Integer cdMdupr) {
+	public void setCdMdupr(Long cdMdupr) {
 		this.cdMdupr = cdMdupr;
 	}
 

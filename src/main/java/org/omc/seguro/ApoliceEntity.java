@@ -20,40 +20,40 @@ public class ApoliceEntity implements Serializable {
 	@Id
 	@Column(name = "CD_APOLI")
 	@GeneratedValue
-	private Integer cdApoli;
+	private Long cdApoli;
 
 	@Column(name = "TP_HISTO_APOLI")
 	private String tpHistoApoli;
 
 	@Column(name = "CD_APOLI_SUSEP")
-	private Integer cdApoliSusep;
+	private Long cdApoliSusep;
 
 	@Column(name = "CD_APOLI_SUSEP_RENOV")
-	private Integer cdApoliSusepRenov;
+	private Long cdApoliSusepRenov;
 
 	@Column(name = "CD_CIA_SGDRA")
-	private Integer cdCiaSgdra;
+	private Long cdCiaSgdra;
 
 	@Column(name = "CD_CIA_SGDRA_RENOV")
-	private Integer cdCiaSgdraRenov;
+	private Long cdCiaSgdraRenov;
 
 	@Column(name = "CD_ENDOS")
-	private Integer cdEndos;
+	private Long cdEndos;
 
 	@Column(name = "CD_MDUPR")
-	private Integer cdMdupr;
+	private Long cdMdupr;
 
 	@Column(name = "CD_NGOCO")
-	private Integer cdNgoco;
+	private Long cdNgoco;
 
 	@Column(name = "CD_RAMO_RENOV")
-	private Integer cdRamoRenov;
+	private Long cdRamoRenov;
 
 	@Column(name = "CD_RAMO_SEG")
-	private Integer cdRamoSeg;
+	private Long cdRamoSeg;
 
 	@Column(name = "CD_SUCSL_FISCL")
-	private Integer cdSucslFiscl;
+	private Long cdSucslFiscl;
 
 	@Column(name = "DT_EMISS_APOLI")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -76,16 +76,16 @@ public class ApoliceEntity implements Serializable {
 	private Date dtUltmaAlter;
 
 	@Column(name = "SQ_MDUPR")
-	private Integer sqMdupr;
+	private Long sqMdupr;
 
 	@Column(name = "TP_HISTO_NGOCO")
 	private String tpHistoNgoco;
 
-	public Integer getCdApoli() {
+	public Long getCdApoli() {
 		return cdApoli;
 	}
 
-	public void setCdApoli(Integer cdApoli) {
+	public void setCdApoli(Long cdApoli) {
 		this.cdApoli = cdApoli;
 	}
 
@@ -97,83 +97,83 @@ public class ApoliceEntity implements Serializable {
 		this.tpHistoApoli = tpHistoApoli;
 	}
 
-	public Integer getCdApoliSusep() {
+	public Long getCdApoliSusep() {
 		return cdApoliSusep;
 	}
 
-	public void setCdApoliSusep(Integer cdApoliSusep) {
+	public void setCdApoliSusep(Long cdApoliSusep) {
 		this.cdApoliSusep = cdApoliSusep;
 	}
 
-	public Integer getCdApoliSusepRenov() {
+	public Long getCdApoliSusepRenov() {
 		return cdApoliSusepRenov;
 	}
 
-	public void setCdApoliSusepRenov(Integer cdApoliSusepRenov) {
+	public void setCdApoliSusepRenov(Long cdApoliSusepRenov) {
 		this.cdApoliSusepRenov = cdApoliSusepRenov;
 	}
 
-	public Integer getCdCiaSgdra() {
+	public Long getCdCiaSgdra() {
 		return cdCiaSgdra;
 	}
 
-	public void setCdCiaSgdra(Integer cdCiaSgdra) {
+	public void setCdCiaSgdra(Long cdCiaSgdra) {
 		this.cdCiaSgdra = cdCiaSgdra;
 	}
 
-	public Integer getCdCiaSgdraRenov() {
+	public Long getCdCiaSgdraRenov() {
 		return cdCiaSgdraRenov;
 	}
 
-	public void setCdCiaSgdraRenov(Integer cdCiaSgdraRenov) {
+	public void setCdCiaSgdraRenov(Long cdCiaSgdraRenov) {
 		this.cdCiaSgdraRenov = cdCiaSgdraRenov;
 	}
 
-	public Integer getCdEndos() {
+	public Long getCdEndos() {
 		return cdEndos;
 	}
 
-	public void setCdEndos(Integer cdEndos) {
+	public void setCdEndos(Long cdEndos) {
 		this.cdEndos = cdEndos;
 	}
 
-	public Integer getCdMdupr() {
+	public Long getCdMdupr() {
 		return cdMdupr;
 	}
 
-	public void setCdMdupr(Integer cdMdupr) {
+	public void setCdMdupr(Long cdMdupr) {
 		this.cdMdupr = cdMdupr;
 	}
 
-	public Integer getCdNgoco() {
+	public Long getCdNgoco() {
 		return cdNgoco;
 	}
 
-	public void setCdNgoco(Integer cdNgoco) {
+	public void setCdNgoco(Long cdNgoco) {
 		this.cdNgoco = cdNgoco;
 	}
 
-	public Integer getCdRamoRenov() {
+	public Long getCdRamoRenov() {
 		return cdRamoRenov;
 	}
 
-	public void setCdRamoRenov(Integer cdRamoRenov) {
+	public void setCdRamoRenov(Long cdRamoRenov) {
 		this.cdRamoRenov = cdRamoRenov;
 	}
 
-	public Integer getCdRamoSeg() {
+	public Long getCdRamoSeg() {
 		return cdRamoSeg;
 	}
 
-	public void setCdRamoSeg(Integer cdRamoSeg) {
+	public void setCdRamoSeg(Long cdRamoSeg) {
 		this.cdRamoSeg = cdRamoSeg;
 	}
 
-	public Integer getCdSucslFiscl() {
+	public Long getCdSucslFiscl() {
 		return cdSucslFiscl;
 	}
 
-	public void setCdSucslFiscl(Integer cdSucslFiscl) {
+	public void setCdSucslFiscl(Long cdSucslFiscl) {
 		this.cdSucslFiscl = cdSucslFiscl;
 	}
 
@@ -217,11 +217,11 @@ public class ApoliceEntity implements Serializable {
 		this.dtUltmaAlter = dtUltmaAlter;
 	}
 
-	public Integer getSqMdupr() {
+	public Long getSqMdupr() {
 		return sqMdupr;
 	}
 
-	public void setSqMdupr(Integer sqMdupr) {
+	public void setSqMdupr(Long sqMdupr) {
 		this.sqMdupr = sqMdupr;
 	}
 
