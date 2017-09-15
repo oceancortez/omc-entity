@@ -5,11 +5,13 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
+@IdClass(NegocioEntityPK.class)
 @Table(name="NEGOCIO")
 public class NegocioEntity implements Serializable {	
 	
@@ -17,21 +19,18 @@ public class NegocioEntity implements Serializable {
 	private static final long serialVersionUID = -3174200950091279419L;
 
 	@Id
-	@Column(name="CD_NGOCO", nullable=false)
-	@GeneratedValue
+	@Column(name="CD_NGOCO", nullable=false)	
 	private Long cdNgoco;
+	
+	@Id
+	@Column(name = "TP_HISTO_NGOCO")
+	private String tpHistoNgoco;
 	
 	@Column(name="NM_CIA")
 	private String nmCia;
 	
 	@Column(name="CD_RAMO")
 	private Long cdRamo;
-	
-	@Column(name="CD_APOLICE")
-	private Long cdApolice;
-	
-	@Column(name="CD_APOLICE_SUSEP")
-	private Long cdApoliceSusep;
 	
 	@Column(name="CD_MDUPR")
 	private Long cdMdupr;
@@ -92,6 +91,16 @@ public class NegocioEntity implements Serializable {
 	
 	@Column(name="CD_CLIEN")
 	private Long cdClien;
+	
+	@Transient
+	NegocioEntityPK pk = new NegocioEntityPK();
+	
+	public Serializable getPk() {
+		this.pk.cdNgoco = this.cdNgoco;
+		this.pk.tpHistoNgoco = this.getTpHistoNgoco();
+		return this.pk;
+	}	
+	
 
 	public Long getCdNgoco() {
 		return cdNgoco;
@@ -116,23 +125,7 @@ public class NegocioEntity implements Serializable {
 	public void setCdRamo(Long cdRamo) {
 		this.cdRamo = cdRamo;
 	}
-
-	public Long getCdApolice() {
-		return cdApolice;
-	}
-
-	public void setCdApolice(Long cdApolice) {
-		this.cdApolice = cdApolice;
-	}
-
-	public Long getCdApoliceSusep() {
-		return cdApoliceSusep;
-	}
-
-	public void setCdApoliceSusep(Long cdApoliceSusep) {
-		this.cdApoliceSusep = cdApoliceSusep;
-	}
-
+	
 	public Long getCdMdupr() {
 		return cdMdupr;
 	}
@@ -291,6 +284,18 @@ public class NegocioEntity implements Serializable {
 
 	public void setCdClien(Long cdClien) {
 		this.cdClien = cdClien;
+	}
+
+
+
+	public String getTpHistoNgoco() {
+		return tpHistoNgoco;
+	}
+
+
+
+	public void setTpHistoNgoco(String tpHistoNgoco) {
+		this.tpHistoNgoco = tpHistoNgoco;
 	}
 	
 	

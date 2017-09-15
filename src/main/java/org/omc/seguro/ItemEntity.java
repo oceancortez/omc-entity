@@ -5,13 +5,15 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
+@IdClass(ItemEntityPK.class)
 @Table(name = "ITEM")
 public class ItemEntity implements Serializable{
 
@@ -19,9 +21,12 @@ public class ItemEntity implements Serializable{
 	private static final long serialVersionUID = -9201535269782125285L;
 
 	@Id
-	@Column(name = "CD_ITEM")
-	@GeneratedValue
+	@Column(name = "CD_ITEM")	
 	private Long cdItem;
+
+	@Id
+	@Column(name = "TP_HISTO_ITEM")
+	private String tpHistoItem;
 
 	@Column(name = "CD_APOLI")
 	private Long cdApoli;
@@ -37,6 +42,9 @@ public class ItemEntity implements Serializable{
 
 	@Column(name = "CD_NGOCO")
 	private Long cdNgoco;
+	
+	@Column(name = "TP_HISTO_NGOCO")
+	private String tpHistoNgoco;
 
 	@Column(name = "CD_MDUPR")
 	private Long cdMdupr;
@@ -49,9 +57,15 @@ public class ItemEntity implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dtEmissItem;
 	
-	@Column(name = "TP_HISTO_ITEM")
-	private String tpHistoItem;
+	@Transient
+	private ItemEntityPK pk = new ItemEntityPK();
 	
+
+	public Serializable getPk() {
+		this.pk.cdItem = this.cdItem;
+		this.pk.setTpHistoItem(this.tpHistoItem);
+		return this.pk;
+	}	
 	
 
 	public Long getCdItem() {
@@ -133,6 +147,15 @@ public class ItemEntity implements Serializable{
 	public void setTpHistoItem(String tpHistoItem) {
 		this.tpHistoItem = tpHistoItem;
 	}
+
+	public String getTpHistoNgoco() {
+		return tpHistoNgoco;
+	}
+
+	public void setTpHistoNgoco(String tpHistoNgoco) {
+		this.tpHistoNgoco = tpHistoNgoco;
+	}
+
 	
 	
 

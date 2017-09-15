@@ -5,23 +5,25 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
+@IdClass(ApoliceEntityPK.class)
 @Table(name = "APOLICE")
 public class ApoliceEntity implements Serializable {
 
 	private static final long serialVersionUID = -4611971083833273815L;
 
 	@Id
-	@Column(name = "CD_APOLI")
-	@GeneratedValue
+	@Column(name = "CD_APOLI")	
 	private Long cdApoli;
 
+	@Id
 	@Column(name = "TP_HISTO_APOLI")
 	private String tpHistoApoli;
 
@@ -80,6 +82,17 @@ public class ApoliceEntity implements Serializable {
 
 	@Column(name = "TP_HISTO_NGOCO")
 	private String tpHistoNgoco;
+	
+	
+	@Transient
+	ApoliceEntityPK pk = new ApoliceEntityPK();
+	
+	public Serializable getPk() {
+		this.pk.cdApoli = this.cdApoli;
+		this.pk.tpHistoApoli = this.tpHistoApoli;
+		return this.pk;
+	}
+	
 
 	public Long getCdApoli() {
 		return cdApoli;
