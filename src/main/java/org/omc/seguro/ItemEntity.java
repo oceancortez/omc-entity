@@ -12,6 +12,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @IdClass(ItemEntityPK.class)
 @Table(name = "ITEM")
@@ -57,6 +59,7 @@ public class ItemEntity implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dtEmissItem;
 	
+	@JsonIgnore
 	@Transient
 	private ItemEntityPK pk = new ItemEntityPK();
 	
