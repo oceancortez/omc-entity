@@ -10,6 +10,8 @@ import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @IdClass(NegocioEntityPK.class)
 @Table(name="NEGOCIO")
@@ -92,6 +94,7 @@ public class NegocioEntity implements Serializable {
 	@Column(name="CD_CLIEN")
 	private Long cdClien;
 	
+	@JsonIgnore
 	@Transient
 	NegocioEntityPK pk = new NegocioEntityPK();
 	
