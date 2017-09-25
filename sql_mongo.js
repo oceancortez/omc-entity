@@ -1,3 +1,19 @@
+// Criar as pastas 
+D:\mongodb\data
+D:\mongodb\log\mongo.log
+
+// incluir as config e o arquivo d:\mongodb\mongo.config
+
+##store data here
+dbpath=D:\mongodb\data
+
+##all output go here
+logpath=D:\mongodb\log\mongo.log
+
+##log read and write operations
+diaglog=3
+
+
 // criando database
 use database_omc
 
