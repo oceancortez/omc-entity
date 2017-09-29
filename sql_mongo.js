@@ -13,6 +13,18 @@ logpath=D:\mongodb\log\mongo.log
 ##log read and write operations
 diaglog=3
 
+//Criar a pasta "data" no caminho 
+D:\mongodb\data
+
+//Criar a pasta "log" no caminho
+D:\mongodb\log
+
+//comando para iniciar 
+D:\mongodb\bin>mongod --config D:\mongodb\mongo.config
+
+
+//abra outro cmd e executo o mongo.exe
+D:\mongodb\bin>mongo.exe
 
 // criando database
 use database_omc
@@ -36,15 +48,16 @@ db.createUser(
 
 
 // Criando uma collection
-db.createCollection("mycollection"){"ok":1}
-db.createCollection("mycol",{ capped :true, autoIndexID :true, size :6142800, max :10000}){"ok":1}
+db.item
+//db.createCollection("item"){"ok":1}
+//db.createCollection("mycol",{ capped :true, autoIndexID :true, size :6142800, max :10000}){"ok":1}
 
 
 //insert na collection
 db.item.insert({"_class" : "org.omc.seguro.mongo.domain.ItemDomain", "cdItem" : NumberLong(1), "tpHistoItem" : "0", "cdApoli" : NumberLong(1), "cdApoliSusepRenov" : NumberLong(1), "cdClien" : NumberLong(1), "cdEndos" : NumberLong(1), "cdNgoco" : NumberLong(1), "tpHistoNgoco" : "0", "cdMdupr" : NumberLong(1), "dtUltmaAlter" : ISODate("2017-09-23T03:00:00Z"), "dtEmissItem" : ISODate("2017-09-23T03:00:00Z")})
 
 // Consultando uma collection
-db.item.fin()
+db.item.find()
 
 
 
