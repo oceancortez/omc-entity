@@ -1,6 +1,7 @@
 --
 -- Database: `omc`
 --
+CREATE DATABASE IF NOT EXISTS `omc`; 
 
 -- --------------------------------------------------------
 
